@@ -12,9 +12,12 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 import os
 from pathlib import Path
 
-# Build paths inside the project like this: BASE_DIR / 'subdir'.
-BASE_DIR = Path(__file__).resolve().parent.parent
 
+# Build paths inside the project like this: BASE_DIR / 'subdir'.
+from dotenv import load_dotenv, find_dotenv
+
+BASE_DIR = Path(__file__).resolve().parent.parent
+load_dotenv(dotenv_path=find_dotenv(), verbose=False, override=True)
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
@@ -25,7 +28,7 @@ SECRET_KEY = 'django-insecure-$0_c@q6*b=q49zypw8wla1hkmwn*0rclgtst311pr9ydhmmmqo
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['localhost']
+ALLOWED_HOSTS = ['localhost', '127.0.0.1']
 
 
 # Application definition
@@ -76,11 +79,11 @@ WSGI_APPLICATION = 'config.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'config.db.backends.postgresql_stat',
+        'ENGINE': 'django.db.backends.postgresql',
         'NAME': os.getenv('DB_NAME', 'billing'),
         'USER': os.getenv('DB_USER', ''),
         'PASSWORD': os.getenv('DB_PASSWORD', ''),
-        'HOST': os.getenv('DB_HOST', ''),
+        'HOST': os.getenv('DB_HOST', 'localhost'),
         'PORT': 5432,
     }
 }
