@@ -27,7 +27,7 @@ load_dotenv(dotenv_path=find_dotenv(), verbose=False, override=True)
 SECRET_KEY = 'django-insecure-$0_c@q6*b=q49zypw8wla1hkmwn*0rclgtst311pr9ydhmmmqo'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['localhost', '127.0.0.1']
 
@@ -141,9 +141,14 @@ REST_FRAMEWORK = {
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles/')
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'frontend', 'build', 'static')
+    os.path.join(BASE_DIR, 'frontend', 'build', 'static'),
+    os.path.join(BASE_DIR, 'frontend', 'build')
 ]
 STATIC_URL = '/static/'
+
+CORS_ORIGIN_WHITELIST = [
+    'https://bloglab2022.herokuapp.com/'
+]
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field

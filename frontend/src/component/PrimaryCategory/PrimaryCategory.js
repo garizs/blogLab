@@ -7,7 +7,7 @@ const PrimaryCategory = () => (
     </div>
     <a className="category cooking" href="/cooking">
       <div className="categoryImg cookingImg">
-        <img alt="cooking" src="./img/primaryCategory/img1.png" />
+        <img alt="cooking" src="/static/img/primaryCategory/img1.png" />
       </div>
       <div className="categoryName">
         <h4>Кулинария</h4>
@@ -18,7 +18,7 @@ const PrimaryCategory = () => (
     </a>
     <a className="category cosiness" href="/cosines">
       <div className="categoryImg cosinessImg">
-        <img alt="cosines" src="./img/primaryCategory/img2.png" />
+        <img alt="cosines" src="/static/img/primaryCategory/img2.png" />
       </div>
       <div className="categoryName">
         <h4>Уют</h4>
@@ -29,7 +29,7 @@ const PrimaryCategory = () => (
     </a>
     <a className="category fashion" href="/fashion">
       <div className="categoryImg fashionImg">
-        <img alt="fashion" src="./img/primaryCategory/img3.png" />
+        <img alt="fashion" src="/static/img/primaryCategory/img3.png" />
       </div>
       <div className="categoryName">
         <h4>Мода</h4>
