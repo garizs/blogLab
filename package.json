@@ -25,11 +25,11 @@
     "web-vitals": "^2.1.2"
   },
   "scripts": {
-    "heroku-prebuild": "cd frontend && npm install && npm run build",
+    "heroku-prebuild": "cd frontend && npm install",
     "start": "cd frontend && npm start",
     "test": "cd frontend && react-scripts test",
     "eject": "cd frontend && react-scripts eject",
-    "heroku-postbuild": "cd frontend && npm run build && react-scripts start"
+    "heroku-postbuil": "cd frontend && npm run build"
   },
   "eslintConfig": {
     "extends": [
