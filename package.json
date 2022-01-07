@@ -29,7 +29,7 @@
     "start": "cd frontend && npm start",
     "test": "cd frontend && react-scripts test",
     "eject": "cd frontend && react-scripts eject",
-    "heroku-postbuild": "npm run build && cd frontend && react-scripts start"
+    "heroku-postbuild": "cd frontend && npm run build && react-scripts start"
   },
   "eslintConfig": {
     "extends": [
