@@ -2,8 +2,8 @@ from rest_framework import viewsets, permissions
 from rest_framework.decorators import action
 from rest_framework.response import Response
 
-from blog.models import Post, FavouritePosts
-from blog.posts.serializers import PostBasicSerializer
+from backend.blog.models import Post, FavouritePosts
+from backend.blog.posts.serializers import PostBasicSerializer
 
 
 class PostsBasicView(viewsets.ModelViewSet):

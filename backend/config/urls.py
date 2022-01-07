@@ -17,8 +17,8 @@ from django.contrib import admin
 from django.conf.urls.static import static
 from django.urls import path, include
 from rest_framework import routers
-import blog.posts.views as views
-from config import settings
+from backend.blog.posts import views
+from backend.config import settings
 from rest_framework_simplejwt import views as jwt_views
 
 router = routers.SimpleRouter()

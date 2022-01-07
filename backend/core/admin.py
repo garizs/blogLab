@@ -1,6 +1,6 @@
 from django.contrib import admin
 from django.utils.safestring import mark_safe
-from blog.models import Post, UserProfile, PostPicture
+from backend.blog.models import Post, UserProfile, PostPicture
 
 
 class PicturesInline(admin.StackedInline):
