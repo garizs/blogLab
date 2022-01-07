@@ -65,7 +65,7 @@ STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, 'backend', 'core', 'templates'), os.path.join(BASE_DIR, 'frontend', 'build')]
+        'DIRS': [os.path.join(BASE_DIR, 'frontend', 'build')]
         ,
         'APP_DIRS': True,
         'OPTIONS': {
@@ -139,9 +139,9 @@ REST_FRAMEWORK = {
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles/')
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'frontend', 'build/static')
+    os.path.join(BASE_DIR, 'frontend', 'build', 'static')
 ]
 STATIC_URL = '/static/'
 
