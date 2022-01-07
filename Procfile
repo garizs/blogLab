@@ -1,1 +1,1 @@
-web: gunicorn blogLab.wsgi
+web: gunicorn sheltered-anchorage-85625.wsgi
