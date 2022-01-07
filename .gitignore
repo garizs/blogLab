@@ -130,7 +130,6 @@ dmypy.json
 .idea/
 
 static/posts
-<<<<<<< HEAD
 static/users
 
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
@@ -156,6 +155,3 @@ static/users
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
-=======
-static/users
->>>>>>> 388b16a1aeafe6dc6c48fa3beadb9946f64d51ea
