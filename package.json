@@ -28,8 +28,7 @@
     "heroku-prebuild": "cd frontend && npm install",
     "start": "cd frontend && npm start",
     "test": "cd frontend && react-scripts test",
-    "eject": "cd frontend && react-scripts eject",
-    "heroku-postbuil": "cd frontend && npm run build"
+    "eject": "cd frontend && react-scripts eject"
   },
   "eslintConfig": {
     "extends": [
