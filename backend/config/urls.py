@@ -15,8 +15,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.conf.urls.static import static
-from django.urls import path, include, re_path
-from django.views.generic import TemplateView
+from django.urls import path, include
 from rest_framework import routers
 from backend.blog.posts import views
 from backend.config import settings
@@ -26,12 +25,11 @@ router = routers.SimpleRouter()
 router.register(prefix=r'posts', viewset=views.PostsViewSet)
 
 urlpatterns = [
-    re_path(r'^$', TemplateView.as_view(template_name='index.html')),
     path('admin/', admin.site.urls),
     path('api/', include(router.urls)),
     path('api/token/', jwt_views.TokenObtainPairView.as_view(), name='token_obtain_pair'),
     path('api/token/refresh/', jwt_views.TokenRefreshView.as_view(), name='token_refresh'),
-] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+]
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
