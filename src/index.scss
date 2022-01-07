@@ -1,0 +1,42 @@
+@import './fonts/font.scss';
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+a {
+  font-family: 'PlayfairDisplay';
+  color: #000000;
+  text-decoration: none;
+}
+
+h2 {
+  font-size: 18px;
+}
+
+h4 {
+  font-size: 60px;
+  color: #ffffff;
+}
+
+h5 {
+  font-size: 282px;
+  font-family: 'Times New Roman', Times, serif;
+  -webkit-text-stroke: 1px #000000;
+  color: #ffffff;
+}
+
+.app {
+  display: flex;
+  justify-content: center;
+}
+
+button {
+  background-color: #ffffff;
+  padding: 0px;
+  border: none;
+}
+::-webkit-scrollbar {
+  width: 0px;
+}

@@ -1,0 +1,10 @@
+.nav {
+    display: flex;
+    align-items: center;
+    width: 394px;
+    ul {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+    }
+}

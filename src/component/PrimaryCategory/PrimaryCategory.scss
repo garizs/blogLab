@@ -1,0 +1,37 @@
+.primaryCategory {
+  display: flex;
+}
+
+.primaryCategoryName {
+  position: absolute;
+  z-index: -1;
+}
+
+.category {
+  width: 469px;
+  height: 582px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.categoryImg {
+  position: absolute;
+  bottom: 0;
+}
+
+.cosinessImg {
+  bottom: -19px;
+}
+
+.categoryName {
+  z-index: 1;
+}
+
+.categoryDescription {
+  z-index: 1;
+  h2 {
+    color: #ffffff;
+  }
+}
