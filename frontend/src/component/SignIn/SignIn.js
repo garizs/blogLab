@@ -15,7 +15,7 @@ const SignIn = () => {
         }}
       >
         {active % 2 === 1 ? <h1>asd</h1> : null}
-        <img alt="signIn" src="img/signIn.svg" />
+        <img alt="signIn" src="./img/signIn.svg" />
       </button>
     </div>
   );
