@@ -1,1 +1,1 @@
-web: gunicorn sheltered-anchorage-85625.wsgi
+web: gunicorn config.wsgi --log-file -
