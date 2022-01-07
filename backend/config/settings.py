@@ -147,7 +147,7 @@ STATICFILES_DIRS = [
 STATIC_URL = '/static/'
 
 CORS_ORIGIN_WHITELIST = [
-    'https://bloglab2022.herokuapp.com/'
+    'https://bloglab2022.herokuapp.com'
 ]
 
 # Default primary key field type

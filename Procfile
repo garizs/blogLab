@@ -1,3 +1,4 @@
 release: python manage.py migrate
 release: python manage.py collectstatic --noinput
-web: gunicorn backend.config.wsgi --log-file -
+web: cd frontend && npm run heroku-prebuild && npm run start
+server: cd backend && python manage.py runserver
