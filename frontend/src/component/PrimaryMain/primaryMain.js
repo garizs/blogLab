@@ -1,11 +1,12 @@
 import PrimaryNews from '../PrimaryNews/PrimaryNews';
-import PrimaryCategory from '../PrimaryCategory/PrimaryCategory';
-import PrimaryCurators from '../PrimaryCurators/PrimaryCurators';
+import PrimaryCategor from '../PrimaryCategory/PrimaryCategory';
+import PrimaryCurators from '../PrimaryCurator/PrimaryCurator';
+import './primaryMain.scss';
 
 const PrimaryMain = () => (
   <div className="PrimaryMain">
     <PrimaryNews />
-    <PrimaryCategory />
+    <PrimaryCategor />
     <PrimaryCurators />
   </div>
 );
