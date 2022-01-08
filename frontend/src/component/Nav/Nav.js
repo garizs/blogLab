@@ -5,22 +5,22 @@ const Nav = () => (
   <div className="nav">
     <ul>
       <li>
-        <Link className="" to="" smooth={true} offset={-50} duration={1000}>
+        <Link to="" smooth={true} offset={-50} duration={1000}>
           <h2>Главная</h2>
         </Link>
       </li>
       <li>
-        <Link className="" to="" smooth={true} offset={-50} duration={1000}>
+        <Link to="primaryCategory" smooth={true} offset={-100} duration={1000}>
           <h2>Рубрика</h2>
         </Link>
       </li>
       <li>
-        <Link className="" to="" smooth={true} offset={-50} duration={1000}>
+        <Link to="primaryCurator" smooth={true} offset={-140} duration={1000}>
           <h2>Кураторы</h2>
         </Link>
       </li>
       <li>
-        <Link className="" to="" smooth={true} offset={-50} duration={1000}>
+        <Link to="" smooth={true} offset={-50} duration={1000}>
           <h2> О Нас</h2>
         </Link>
       </li>

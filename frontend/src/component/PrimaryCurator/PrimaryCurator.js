@@ -1,30 +1,42 @@
 import './PrimaryCurator.scss';
 
 const PrimaryCurator = () => (
-  <div className="primaryCurator">
+  <div id="primaryCurator" className="primaryCurator">
     <div className="primaryCuratorName">
       <h5>КУРАТОР</h5>
     </div>
-    <a className="first" href="/first">
+    <a className="curator first" href="/curatorFirst">
       <div className="curatorImg firstImg">
         <img alt="first" src="./img/primaryCurator/img1.png" />
       </div>
-      <div className="curatorName">Дмитрий Левов</div>
-      <div className="curatorDescription">Архитектор о современных тендециях сферы</div>
+      <div className="curatorName">
+        <h4>Дмитрий Левов</h4>
+      </div>
+      <div className="curatorDescription">
+        <h2>Архитектор о современных тендециях сферы</h2>
+      </div>
     </a>
-    <a className="second" href="/second">
+    <a className="curator second" href="/curatorSecond">
       <div className="curatorImg secondImg">
         <img alt="second" src="./img/primaryCurator/img2.png" />
       </div>
-      <div className="curatorName">Мария Серединкова</div>
-      <div className="curatorDescription">Самый популярный шеф-повар страны делится кулинарными секретами </div>
+      <div className="curatorName">
+        <h4>Мария Серединкова</h4>
+      </div>
+      <div className="curatorDescription">
+        <h2>Самый популярный шеф-повар страны делится кулинарными секретами</h2>
+      </div>
     </a>
-    <a className="third" href="/third">
+    <a className="curator third" href="/curatorThird">
       <div className="curatorImg thirdImg">
         <img alt="third" src="./img/primaryCurator/img3.png" />
       </div>
-      <div className="curatorName">Изольда Правова</div>
-      <div className="curatorDescription">Дизайнер одежды рассказывает про моду человеческим языком</div>
+      <div className="curatorName">
+        <h4>Изольда Правова</h4>
+      </div>
+      <div className="curatorDescription">
+        <h2>Дизайнер одежды рассказывает про моду человеческим языком</h2>
+      </div>
     </a>
   </div>
 );

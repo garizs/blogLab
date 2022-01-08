@@ -1,7 +1,7 @@
 import './PrimaryCategory.scss';
 
 const PrimaryCategory = () => (
-  <div className="primaryCategory">
+  <div id="primaryCategory" className="primaryCategory">
     <div className="primaryCategoryName">
       <h5>РУБРИКА</h5>
     </div>

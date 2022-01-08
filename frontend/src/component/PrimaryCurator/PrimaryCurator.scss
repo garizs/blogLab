@@ -1,6 +1,7 @@
 @import '../../fonts/font.scss';
 
 .primaryCurator {
+  margin: 140px 0px 0px;
   position: relative;
   width: 1445px;
   display: flex;
@@ -12,19 +13,65 @@
   //top: 81px;
   position: absolute;
   z-index: -1;
+  h5 {
+    font-size: 330px;
+  }
 }
 
 .curator {
-  width: 469px;
-  height: 582px;
+  height: 760px;
   position: relative;
   display: flex;
   flex-direction: column;
 }
 
+.first {
+  width: 480px;
+  .curatorName {
+    padding-top: 79.17%;
+  }
+  .curatorDescription {
+    h2 {
+      font-size: 30px;
+    }
+  }
+}
+
+.second {
+  width: 453px;
+  .curatorName {
+    padding-top: 83.885%;
+  }
+  .curatorDescription {
+    h2 {
+      font-size: 24px;
+    }
+  }
+}
+
+.third {
+  width: 480px;
+  .curatorName {
+    padding-top: 79.17%;
+  }
+  .curatorDescription {
+    h2 {
+      font-size: 35px;
+    }
+  }
+}
+
 .curatorImg {
   position: absolute;
   bottom: 0;
+}
+
+.firstImg {
+  left: -75px;
+}
+
+.secondImg {
+  left: -90px;
 }
 
 // .cosinessImg {
@@ -33,13 +80,13 @@
 
 .curatorName {
   z-index: 1;
-  padding-top: 94.67%;
-  padding-left: 12px;
+  padding-left: 21px;
+  width: 271px;
 }
 
 .curatorDescription {
   z-index: 1;
-  padding-left: 12px;
+  padding-left: 21px;
   padding-top: 2%;
   h2 {
     font-family: 'Merriweather';

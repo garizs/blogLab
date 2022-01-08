@@ -1,10 +1,10 @@
 import PrimaryNews from '../PrimaryNews/PrimaryNews';
 import PrimaryCategor from '../PrimaryCategory/PrimaryCategory';
 import PrimaryCurators from '../PrimaryCurator/PrimaryCurator';
-import './primaryMain.scss';
+import './PrimaryMain.scss';
 
 const PrimaryMain = () => (
-  <div className="PrimaryMain">
+  <div className="primaryMain">
     <PrimaryNews />
     <PrimaryCategor />
     <PrimaryCurators />

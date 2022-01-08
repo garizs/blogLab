@@ -1,5 +1,5 @@
 import { Route, Routes } from 'react-router-dom';
-import PrimaryMain from '../PrimaryMain/primaryMain';
+import PrimaryMain from '../PrimaryMain/PrimaryMain';
 import './Main.scss';
 
 const Main = () => (
