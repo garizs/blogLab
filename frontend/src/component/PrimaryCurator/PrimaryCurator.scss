@@ -30,22 +30,12 @@
   .curatorName {
     padding-top: 79.17%;
   }
-  .curatorDescription {
-    h2 {
-      font-size: 30px;
-    }
-  }
 }
 
 .second {
   width: 453px;
   .curatorName {
     padding-top: 83.885%;
-  }
-  .curatorDescription {
-    h2 {
-      font-size: 24px;
-    }
   }
 }
 
@@ -54,10 +44,11 @@
   .curatorName {
     padding-top: 79.17%;
   }
-  .curatorDescription {
-    h2 {
-      font-size: 35px;
-    }
+}
+
+.curatorDescription {
+  h2 {
+    font-size: 24px;
   }
 }
 

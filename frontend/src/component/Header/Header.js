@@ -3,11 +3,11 @@ import Logo from '../Logo/Logo';
 import SignIn from '../SignIn/SignIn';
 import './Header.scss';
 
-const Header = () => (
+const Header = ({ checkLogIn }) => (
   <div className="header">
     <Logo />
     <Nav />
-    <SignIn />
+    <SignIn checkLogIn={checkLogIn} />
   </div>
 );
 

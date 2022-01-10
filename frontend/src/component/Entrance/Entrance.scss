@@ -1,0 +1,70 @@
+@import '../../fonts/font.scss';
+
+.entrance {
+  top: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 4;
+
+  .logIn {
+    width: 39.625%;
+    background: #ffffff;
+    height: 639px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .logIn_name {
+      padding: 21.13% 0px 15.46%;
+
+      h2 {
+        font-weight: bold;
+      }
+    }
+
+    .logIn_button {
+      padding: 10.25% 0px 15.93%;
+
+      button {
+        border-radius: 5px;
+        width: 229px;
+        height: 67px;
+        background-color: #000000;
+        color: #ffffff;
+        font-size: 25px;
+        font-family: 'Merriweather';
+      }
+    }
+    input {
+      margin-bottom: 2.84%;
+      font-family: "PlayfairDisplay";
+      width: 325px;
+      border: 0px;
+      border-bottom: 1px solid #000000;
+
+      &:focus {
+        outline: 1px solid #000000;
+      }
+    }
+  }
+
+  .logIn_description {
+    text-align: center;
+    width: 324px;
+    height: 48px;
+
+    h2 {
+      font-family: 'PlayfairDisplay-Italic';
+
+      button {
+        font-family: 'PlayfairDisplay-Black';
+        font-size: 18px;
+      }
+    }
+  }
+}

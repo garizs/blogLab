@@ -15,7 +15,7 @@ export default (state = defaultState, { type, payload }) => {
         primaryNews: { ...payload },
       };
     default:
-      return {};
+      return { ...state };
   }
 };
 
