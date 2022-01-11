@@ -1,4 +1,4 @@
 import reducerPrimaryMainNews from './reducerPrimaryMainNews';
-import reducerLogIn from './reducerLogIn';
+import reducerAuthorization from './reducerAuthorization';
 
-export default { reducerPrimaryMainNews, reducerLogIn };
+export default { reducerPrimaryMainNews, reducerAuthorization };

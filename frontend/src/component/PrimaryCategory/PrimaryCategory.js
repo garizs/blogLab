@@ -1,3 +1,4 @@
+import { NavLink } from 'react-router-dom';
 import './PrimaryCategory.scss';
 
 const PrimaryCategory = () => (
@@ -5,7 +6,7 @@ const PrimaryCategory = () => (
     <div className="primaryCategoryName">
       <h5>РУБРИКА</h5>
     </div>
-    <a className="category cooking" href="/cooking">
+    <NavLink className="category cooking" to="/cooking">
       <div className="categoryImg cookingImg">
         <img alt="cooking" src="./img/primaryCategory/img1.png" />
       </div>
@@ -15,7 +16,7 @@ const PrimaryCategory = () => (
       <div className="categoryDescription">
         <h2>Рецепты и не только</h2>
       </div>
-    </a>
+    </NavLink>
     <a className="category cosiness" href="/cosines">
       <div className="categoryImg cosinessImg">
         <img alt="cosines" src="./img/primaryCategory/img2.png" />
