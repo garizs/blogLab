@@ -9,9 +9,11 @@ const Header = ({ statusAuthorization, setActive, logOut }) => {
   };
   return (
     <div className="header">
-      <Logo />
-      <Nav />
-      {statusAuthorization === 200 ? <Button /> : <SignIn setActive={setActive} />}
+      <div className="headerBar">
+        <Logo />
+        <Nav />
+        {statusAuthorization === 200 ? <Button /> : <SignIn setActive={setActive} />}
+      </div>
     </div>
   );
 };

@@ -1,0 +1,116 @@
+@import '../../fonts/font.scss';
+
+.primaryNews {
+  position: relative;
+  width: 1445px;
+  display: grid;
+  grid-template-columns: 461px 154px 366px 417px;
+  grid-gap: 14px;
+
+  .primaryNewsItem {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
+    &:hover {
+      border-radius: 5px;
+      background-color: rgba(0, 0, 0, 0.7);
+    }
+    position: relative;
+  }
+
+  .primaryNewsNumber1 {
+    width: 629px;
+    height: 313px;
+    grid-column-start: 1;
+    grid-column-end: 3;
+
+    .primaryNewsTitle {
+      margin-top: 23.84%;
+      margin-left: 11px;
+      width: 398px;
+    }
+  }
+
+  .primaryNewsNumber2 {
+    width: 366px;
+    height: 314px;
+    grid-column-start: 3;
+    grid-column-end: 4;
+
+    .primaryNewsTitle {
+      margin-top: 40.98%;
+      margin-left: 11px;
+      width: 222px;
+    }
+  }
+
+  .primaryNewsNumber3 {
+    width: 417px;
+    height: 640px;
+    grid-row-start: 1;
+    grid-row-end: 3;
+    grid-column-start: 4;
+    grid-column-end: 5;
+
+    .primaryNewsTitle {
+      margin-top: 97.84%;
+      margin-left: 11px;
+      width: 356px;
+    }
+  }
+
+  .primaryNewsNumber4 {
+    width: 461px;
+    height: 314px;
+    grid-row-start: 2;
+    grid-column-start: 1;
+    grid-column-end: 3;
+
+    .primaryNewsTitle {
+      margin-top: 32.53%;
+      margin-left: 11px;
+      width: 244px;
+    }
+  }
+
+  .primaryNewsNumber5 {
+    width: 534px;
+    height: 314px;
+    grid-row-start: 2;
+    grid-column-start: 2;
+    grid-column-end: 4;
+
+    .primaryNewsTitle {
+      margin-top: 28.08%;
+      margin-left: 11px;
+      width: 333px;
+    }
+  }
+
+  .primaryNewsImg {
+    z-index: -1;
+    position: absolute;
+  }
+
+  .primaryNewsTitle {
+    h1 {
+      color: #ffffff;
+    }
+    z-index: 1;
+  }
+
+  .primaryNewsDescription {
+    margin-top: 5%;
+    margin-left: 11px;
+    h2 {
+      font-family: 'Merriweather-LightIt';
+      color: #ffffff;
+    }
+  }
+
+  .primaryNewsDate {
+    margin-bottom: 12px;
+    margin-left: 11px;
+  }
+}

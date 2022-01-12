@@ -67,53 +67,68 @@ export const logOut = () => (dispatch) => {
 };
 
 export const logIn = () => (dispatch) => {
+  const funlogOut = () => {
+    localStorage.token = JSON.stringify({ token: null });
+
+    dispatch({ type: LOG_OUT });
+  };
+
+  const funLogIn = (token) => {
+    axios
+      .get('https://bloglab-backend.herokuapp.com/api/users/current_user/', {
+        headers: { Authorization: `Bearer ${token.access}` },
+      })
+      .then((res) => {
+        dispatch({
+          type: LOG_IN_ACCESS,
+          payload: res.status,
+        });
+      })
+      .catch((errorAccess) => {
+        dispatch({
+          type: LOG_IN_ACCESS,
+          payload: errorAccess,
+        });
+        // eslint-disable-next-line no-use-before-define
+        funRefresh(token);
+      });
+  };
+
+  const funRefresh = (token) => {
+    axios
+      .post('https://bloglab-backend.herokuapp.com/api/token/refresh/', {
+        refresh: token.refresh,
+      })
+      .then((res) => {
+        localStorage.setItem('token', JSON.stringify({ ...token, ...res.data }));
+
+        dispatch({
+          type: LOG_IN_REFRESH,
+          payload: res.status,
+        });
+
+        funLogIn({ ...token, ...res.data });
+      })
+      .catch((error) => {
+        dispatch({
+          type: LOG_IN_REFRESH,
+          payload: { error, token },
+        });
+
+        funlogOut();
+      });
+  };
+
   try {
     const token = JSON.parse(localStorage.getItem('token'));
     if (token && token.access) {
-      axios
-        .get('https://bloglab-backend.herokuapp.com/api/users/current_user/', {
-          headers: { Authorization: `Bearer ${token?.access}` },
-        })
-        .then((res) => {
-          dispatch({
-            type: LOG_IN_ACCESS,
-            payload: res.status,
-          });
-        })
-        .catch((errorAccess) => {
-          dispatch({
-            type: LOG_IN_ACCESS,
-            payload: errorAccess,
-          });
-
-          axios
-            .get('https://bloglab-backend.herokuapp.com/api/token/refresh/', {
-              refresh: token?.refresh,
-            })
-            .then((res) => {
-              localStorage.setItem('token', JSON.stringify({ ...token, ...res.data }));
-
-              dispatch({
-                type: LOG_IN_REFRESH,
-                payload: res.status,
-              });
-
-              logIn();
-            })
-            .catch((error) => {
-              dispatch({
-                type: LOG_IN_REFRESH,
-                payload: error,
-              });
-
-              logOut();
-            });
-        });
+      funLogIn(token);
+    } else if (token && token.refresh) {
+      funRefresh(token);
     } else {
-      localStorage.token = JSON.stringify({ token: null });
-      dispatch({ type: LOG_OUT });
+      funlogOut();
     }
   } catch {
-    logIn();
+    funlogOut();
   }
 };

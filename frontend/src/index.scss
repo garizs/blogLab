@@ -5,6 +5,7 @@ h2,
 h3,
 h4,
 h5,
+h6,
 p,
 a {
   font-family: 'PlayfairDisplay';
@@ -30,6 +31,11 @@ h5 {
   //font-size: 282px;
   font-family: 'Times New Roman', Times, serif;
   -webkit-text-stroke: 1px #000000;
+  color: #ffffff;
+}
+
+h6 {
+  font-size: 14px;
   color: #ffffff;
 }
 

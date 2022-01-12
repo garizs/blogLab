@@ -12,7 +12,7 @@ export default (state = defaultState, { type, payload }) => {
     case GET_PRIMARY_NEWS:
       return {
         ...state,
-        primaryNews: { ...payload },
+        primaryNews: [...payload],
       };
     default:
       return { ...state };
@@ -20,7 +20,7 @@ export default (state = defaultState, { type, payload }) => {
 };
 
 export const loadingPrimaryNews = () => (dispatch) => {
-  axios.get('./api/mainNews.json').then((news) =>
+  axios.get('https://bloglab-backend.herokuapp.com/api/posts/get_main_posts/').then((news) =>
     dispatch({
       type: GET_PRIMARY_NEWS,
       payload: news.data,

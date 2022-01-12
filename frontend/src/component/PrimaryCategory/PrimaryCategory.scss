@@ -21,11 +21,19 @@
   position: relative;
   display: flex;
   flex-direction: column;
+  &:hover {
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0.3);
+  }
 }
 
 .categoryImg {
+  width: inherit;
   position: absolute;
   bottom: 0;
+  img {
+    width: inherit;
+  }
 }
 
 .cosinessImg {
@@ -34,16 +42,16 @@
 
 .categoryName {
   z-index: 1;
-  padding-top: 94.67%;
-  padding-left: 12px;
+  margin-top: 94.67%;
+  margin-left: 12px;
 }
 
 .categoryDescription {
   z-index: 1;
-  padding-left: 12px;
-  padding-top: 2%;
+  margin-left: 12px;
+  margin-top: 2%;
   h2 {
-    font-family: 'Merriweather';
+    font-family: 'Merriweather-LightIt';
     color: #ffffff;
   }
 }

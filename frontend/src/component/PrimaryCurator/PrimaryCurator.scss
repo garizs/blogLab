@@ -23,26 +23,30 @@
   position: relative;
   display: flex;
   flex-direction: column;
+  &:hover {
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0.3);
+  }
 }
 
 .first {
   width: 480px;
   .curatorName {
-    padding-top: 79.17%;
+    margin-top: 79.17%;
   }
 }
 
 .second {
   width: 453px;
   .curatorName {
-    padding-top: 83.885%;
+    margin-top: 83.885%;
   }
 }
 
 .third {
   width: 480px;
   .curatorName {
-    padding-top: 79.17%;
+    margin-top: 79.17%;
   }
 }
 
@@ -71,16 +75,16 @@
 
 .curatorName {
   z-index: 1;
-  padding-left: 21px;
+  margin-left: 21px;
   width: 271px;
 }
 
 .curatorDescription {
   z-index: 1;
-  padding-left: 21px;
-  padding-top: 2%;
+  margin-left: 21px;
+  margin-top: 2%;
   h2 {
-    font-family: 'Merriweather';
+    font-family: 'Merriweather-LightIt';
     color: #ffffff;
   }
 }

@@ -6,7 +6,7 @@ const Nav = () => (
     <ul>
       <li>
         <button>
-          <Link to="" smooth={true} offset={-50} duration={1000}>
+          <Link to="primaryNews" smooth={true} offset={-140} duration={1000}>
             <h2>Главная</h2>
           </Link>
         </button>

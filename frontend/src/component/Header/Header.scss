@@ -1,9 +1,13 @@
 .header {
-    display: flex;
-    justify-content: space-between;
-    position: fixed;
-    background-color: #ffffff;
+  background-color: #ffffff;
+  width: 100%;
+  position: fixed;
+  z-index: 3;
+  .headerBar {
+    margin: auto;
     height: 140px;
     width: 1440px;
-    z-index: 3;
+    display: flex;
+    justify-content: space-between;
+  }
 }
