@@ -1,0 +1,58 @@
+@import '../../fonts/font.scss';
+
+.news {
+  width: 1440px;
+
+  .newsTitle {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    border-radius: 10px;
+    width: 1035px;
+    height: 313px;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 99.98%, #000000 100%);
+
+    .newsTitleImg {
+      z-index: -1;
+      position: absolute;
+      width: inherit;
+      height: inherit;
+
+      img {
+        width: inherit;
+      }
+    }
+
+    .newsTitleText {
+      margin-top: 10.72%;
+      margin-left: 23px;
+    }
+
+    .newsTitleDiscpription {
+      margin-top: 1%;
+      margin-left: 26px;
+
+      h2 {
+        font-family: 'Merriweather-LightIt';
+        color: #ffffff;
+      }
+    }
+
+    .newsTitleDate {
+      margin-top: 2%;
+      margin-left: 26px;
+      margin-bottom: 1.15%;
+    }
+  }
+
+  .newsText {
+    width: 1035px;
+    line-height: 50px;
+    h1 {
+      font-size: 25px;
+      font-family: 'PlayfairDisplay-Regular';
+    }
+  }
+}

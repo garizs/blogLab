@@ -23,7 +23,7 @@ const App = ({ statusAuthorization, logOut, logIn, authorization }) => {
   }, [active]);
 
   return (
-    <div className="app" style={{ overflow: active ? 'hidden' : 'auto' }}>
+    <div className="app">
       <Router>
         <Header statusAuthorization={statusAuthorization} setActive={setActive} logOut={logOut} />
         <Main />

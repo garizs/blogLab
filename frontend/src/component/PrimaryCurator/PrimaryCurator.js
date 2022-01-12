@@ -1,4 +1,7 @@
 import './PrimaryCurator.scss';
+import img1 from '../../common/img/primaryCurator/img1.png';
+import img2 from '../../common/img/primaryCurator/img2.png';
+import img3 from '../../common/img/primaryCurator/img3.png';
 
 const PrimaryCurator = () => (
   <div id="primaryCurator" className="primaryCurator">
@@ -7,7 +10,7 @@ const PrimaryCurator = () => (
     </div>
     <a className="curator first" href="/curatorFirst">
       <div className="curatorImg firstImg">
-        <img alt="first" src="./img/primaryCurator/img1.png" />
+        <img alt="first" src={img1} />
       </div>
       <div className="curatorName">
         <h4>Дмитрий Левов</h4>
@@ -18,7 +21,7 @@ const PrimaryCurator = () => (
     </a>
     <a className="curator second" href="/curatorSecond">
       <div className="curatorImg secondImg">
-        <img alt="second" src="./img/primaryCurator/img2.png" />
+        <img alt="second" src={img2} />
       </div>
       <div className="curatorName">
         <h4>Мария Серединкова</h4>
@@ -29,7 +32,7 @@ const PrimaryCurator = () => (
     </a>
     <a className="curator third" href="/curatorThird">
       <div className="curatorImg thirdImg">
-        <img alt="third" src="./img/primaryCurator/img3.png" />
+        <img alt="third" src={img3} />
       </div>
       <div className="curatorName">
         <h4>Изольда Правова</h4>

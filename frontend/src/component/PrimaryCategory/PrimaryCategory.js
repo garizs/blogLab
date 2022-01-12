@@ -1,5 +1,8 @@
 import { NavLink } from 'react-router-dom';
 import './PrimaryCategory.scss';
+import cooking from '../../common/img/primaryCategory/img1.png';
+import cosines from '../../common/img/primaryCategory/img2.png';
+import fashion from '../../common/img/primaryCategory/img3.png';
 
 const PrimaryCategory = () => (
   <div id="primaryCategory" className="primaryCategory">
@@ -8,7 +11,7 @@ const PrimaryCategory = () => (
     </div>
     <NavLink className="category cooking" to="/cooking">
       <div className="categoryImg cookingImg">
-        <img alt="cooking" src="./img/primaryCategory/img1.png" />
+        <img alt="cooking" src={cooking} />
       </div>
       <div className="categoryName">
         <h4>Кулинария</h4>
@@ -19,7 +22,7 @@ const PrimaryCategory = () => (
     </NavLink>
     <a className="category cosiness" href="/cosines">
       <div className="categoryImg cosinessImg">
-        <img alt="cosines" src="./img/primaryCategory/img2.png" />
+        <img alt="cosines" src={cosines} />
       </div>
       <div className="categoryName">
         <h4>Уют</h4>
@@ -30,7 +33,7 @@ const PrimaryCategory = () => (
     </a>
     <a className="category fashion" href="/fashion">
       <div className="categoryImg fashionImg">
-        <img alt="fashion" src="./img/primaryCategory/img3.png" />
+        <img alt="fashion" src={fashion} />
       </div>
       <div className="categoryName">
         <h4>Мода</h4>

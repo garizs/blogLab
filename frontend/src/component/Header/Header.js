@@ -1,6 +1,7 @@
 import Nav from '../Nav/Nav';
 import Logo from '../Logo/Logo';
 import SignIn from '../SignIn/SignIn';
+import ProfileLink from '../ProfileLink/ProfileLink';
 import './Header.scss';
 
 const Header = ({ statusAuthorization, setActive, logOut }) => {
@@ -12,7 +13,8 @@ const Header = ({ statusAuthorization, setActive, logOut }) => {
       <div className="headerBar">
         <Logo />
         <Nav />
-        {statusAuthorization === 200 ? <Button /> : <SignIn setActive={setActive} />}
+        {statusAuthorization === 200 ? <ProfileLink /> : <SignIn setActive={setActive} />}
+        <Button />
       </div>
     </div>
   );
