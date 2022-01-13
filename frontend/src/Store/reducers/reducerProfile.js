@@ -95,7 +95,7 @@ export const changeProfile = (password, email) => (dispatch) => {
   axios
     .post(
       `https://bloglab-backend.herokuapp.com/api/users/change_user/`,
-      { data: { password, first_name: '', last_name: '', email, profile_picture: '' } },
+      { data: { password, email } },
       {
         headers: { Authorization: `Bearer ${token.access}` },
       }
@@ -110,7 +110,6 @@ export const changeProfile = (password, email) => (dispatch) => {
       dispatch({
         type: ERROR_PROF,
         payload: { error, email, password },
-        // funRefresh(token);
       });
     });
 };

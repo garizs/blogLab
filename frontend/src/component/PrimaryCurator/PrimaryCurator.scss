@@ -25,7 +25,8 @@
   flex-direction: column;
   &:hover {
     border-radius: 5px;
-    background-color: rgba(0, 0, 0, 0.3);
+    background: linear-gradient(
+      180deg, rgba(0, 0, 0, 0) 0%, #000000 99.98%, #000000 100%);
   }
 }
 

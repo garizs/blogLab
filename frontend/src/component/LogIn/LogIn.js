@@ -3,21 +3,25 @@ import { useEffect, useState, useRef } from 'react';
 import './LogIn.scss';
 
 // eslint-disable-next-line no-unused-vars
-const LogIn = ({ setActive, authorization }) => {
+const LogIn = ({ setStatusAuthorization, statusAuthorization, setActive, authorization, registration }) => {
   const [check, setCheck] = useState(false);
 
   const emailRef = useRef();
   const usernameRef = useRef();
   const passwordRef = useRef();
 
+  useEffect(() => {});
+
   useEffect(() => {
     document.addEventListener('click', (e) => {
+      setStatusAuthorization('');
       if (e.target.className === 'logIn') {
         setActive(false);
       }
     });
     return () => {
       document.addEventListener('click', (e) => {
+        setStatusAuthorization('');
         if (e.target.className === 'logIn') {
           setActive(false);
         }
@@ -43,6 +47,9 @@ const LogIn = ({ setActive, authorization }) => {
             }
           }}
         />
+        <div className="error">
+          {statusAuthorization === 200 && check ? null : <h2>Введен неправильный пароль или логин</h2>}
+        </div>
         {check ? null : (
           <div className="logIn_description">
             <h2>
@@ -54,7 +61,14 @@ const LogIn = ({ setActive, authorization }) => {
           <button
             onClick={
               check
-                ? () => {}
+                ? () => {
+                    if (usernameRef.current.value.trim() && passwordRef.current.value.trim()) {
+                      registration(usernameRef.current.value, emailRef.current.value, passwordRef.current.value);
+                      emailRef.current.value = '';
+                      usernameRef.current.value = '';
+                      passwordRef.current.value = '';
+                    }
+                  }
                 : () => {
                     if (usernameRef.current.value.trim() && passwordRef.current.value.trim()) {
                       authorization(usernameRef.current.value, passwordRef.current.value);

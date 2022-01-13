@@ -27,6 +27,17 @@
       }
     }
 
+    .error {
+      width: 390px;
+      height: 40px;
+      display: flex;
+
+      h2 {
+        height: inherit;
+        color: #8d0000;
+      }
+    }
+
     .logIn_button {
       padding: 10.25% 0px 15.93%;
 
@@ -42,7 +53,7 @@
     }
     input {
       margin-bottom: 2.84%;
-      font-family: "PlayfairDisplay";
+      font-family: 'PlayfairDisplay';
       width: 325px;
       border: 0px;
       border-bottom: 1px solid #000000;
