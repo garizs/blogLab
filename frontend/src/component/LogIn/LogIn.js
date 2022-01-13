@@ -3,26 +3,31 @@ import { useEffect, useState, useRef } from 'react';
 import './LogIn.scss';
 
 // eslint-disable-next-line no-unused-vars
-const LogIn = ({ setStatusAuthorization, statusAuthorization, setActive, authorization, registration }) => {
+const LogIn = ({ statusAuthorization, setActive, authorization, registration }) => {
   const [check, setCheck] = useState(false);
+  const [error, setError] = useState(false);
 
   const emailRef = useRef();
   const usernameRef = useRef();
   const passwordRef = useRef();
 
-  useEffect(() => {});
+  useEffect(() => {
+    if (statusAuthorization !== 200) {
+      setError(true);
+    }
+  }, [statusAuthorization]);
 
   useEffect(() => {
     document.addEventListener('click', (e) => {
-      setStatusAuthorization('');
       if (e.target.className === 'logIn') {
+        setError(false);
         setActive(false);
       }
     });
     return () => {
       document.addEventListener('click', (e) => {
-        setStatusAuthorization('');
         if (e.target.className === 'logIn') {
+          setError(false);
           setActive(false);
         }
       });
@@ -47,9 +52,8 @@ const LogIn = ({ setStatusAuthorization, statusAuthorization, setActive, authori
             }
           }}
         />
-        <div className="error">
-          {statusAuthorization === 200 && check ? null : <h2>Введен неправильный пароль или логин</h2>}
-        </div>
+
+        <div className="error">{!error ? null : <h2> </h2>}</div>
         {check ? null : (
           <div className="logIn_description">
             <h2>

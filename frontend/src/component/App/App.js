@@ -8,20 +8,18 @@ import { authorization, logOut, logIn } from '../../Store/reducers/reducerAuthor
 import { registration } from '../../Store/reducers/reducerRegistration';
 
 // eslint-disable-next-line no-shadow
-const App = ({ status, logOut, logIn, authorization, registration }) => {
+const App = ({ statusAuthorization, logOut, logIn, authorization, registration }) => {
   const [active, setActive] = useState(false);
-  const [statusAuthorization, setStatusAuthorization] = useState(status);
 
   useEffect(() => {
     logIn();
   }, []);
 
   useEffect(() => {
-    setStatusAuthorization(status);
-    if (status === 200) {
+    if (statusAuthorization === 200) {
       setActive(false);
     }
-  }, [status]);
+  }, [statusAuthorization]);
 
   useEffect(() => {
     document.body.style.overflow = active ? 'hidden' : 'auto';
@@ -34,7 +32,6 @@ const App = ({ status, logOut, logIn, authorization, registration }) => {
         <Main statusAuthorization={statusAuthorization} />
         {active ? (
           <LogIn
-            setStatusAuthorization={setStatusAuthorization}
             statusAuthorization={statusAuthorization}
             setActive={setActive}
             authorization={authorization}
@@ -46,7 +43,7 @@ const App = ({ status, logOut, logIn, authorization, registration }) => {
   );
 };
 
-export default connect((data) => ({ status: data.reducerAuthorization.status }), {
+export default connect((data) => ({ statusAuthorization: data.reducerAuthorization.status }), {
   authorization,
   logOut,
   logIn,
