@@ -1,0 +1,61 @@
+.prof {
+  width: 1440px;
+  display: flex;
+  justify-content: space-between;
+
+  .profPersonal {
+    width: 525px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-right: 13.54%;
+
+    .profDescription {
+      display: flex;
+      justify-content: space-between;
+      button {
+        img {
+          width: 27px;
+          height: 27px;
+        }
+      }
+      h2 {
+        font-weight: bold;
+      }
+    }
+
+    .profPersonalData {
+      margin-top: 23px;
+
+      .input {
+        margin-top: 10px;
+        font-size: 20px;
+        width: 100%;
+        font-family: 'PlayfairDisplay';
+        color: #000000;
+        background: #ffffff;
+        border: 0px #000000;
+        border-bottom: 1px solid;
+
+        &.false:focus {
+
+            outline: 0px;
+        }
+      }
+    }
+
+    .profLogOut {
+      padding: 10.25% 0px 15.93%;
+
+      button {
+        border-radius: 5px;
+        width: 229px;
+        height: 67px;
+        background-color: #000000;
+        color: #ffffff;
+        font-size: 25px;
+        font-family: 'Merriweather';
+      }
+    }
+  }
+}

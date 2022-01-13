@@ -2,6 +2,7 @@ import { Route, Routes } from 'react-router-dom';
 import PrimaryMain from '../PrimaryMain/PrimaryMain';
 import News from '../News/News';
 import Profile from '../Profile/Profile';
+import Bookmark from '../Bookmark/Bookmark';
 import './Main.scss';
 
 const Ttt = () => (
@@ -20,13 +21,14 @@ const Ttt = () => (
   </h1>
 );
 
-const Main = () => (
+const Main = ({ statusAuthorization }) => (
   <div className="main">
     <Routes>
       <Route exact path={'/'} element={<PrimaryMain />} />
       <Route path={'/cooking'} element={<Ttt></Ttt>} />
       <Route path={'/news/id=:id'} element={<News />} />
-      <Route path={'/profile'} element={<Profile />} />
+      {statusAuthorization === 200 ? <Route path={'/bookmark'} element={<Bookmark />} /> : null}
+      {statusAuthorization === 200 ? <Route path={'/profile'} element={<Profile />} /> : null}
     </Routes>
   </div>
 );

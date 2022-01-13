@@ -1,6 +1,6 @@
 @import '../../fonts/font.scss';
 
-.entrance {
+.logIn {
   top: auto;
   display: flex;
   justify-content: center;
@@ -11,7 +11,7 @@
   background: rgba(0, 0, 0, 0.8);
   z-index: 4;
 
-  .logIn {
+  .logInContent {
     width: 39.625%;
     background: #ffffff;
     height: 639px;

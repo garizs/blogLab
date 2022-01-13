@@ -9,5 +9,12 @@
     width: 1440px;
     display: flex;
     justify-content: space-between;
+    align-items: center;
+
+    .personalAction {
+      width: 70px;
+      display: flex;
+      justify-content: space-between;
+    }
   }
 }

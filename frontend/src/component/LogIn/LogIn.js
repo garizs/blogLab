@@ -1,9 +1,9 @@
 import { useEffect, useState, useRef } from 'react';
 
-import './Entrance.scss';
+import './LogIn.scss';
 
 // eslint-disable-next-line no-unused-vars
-const Entrance = ({ setActive, authorization }) => {
+const LogIn = ({ setActive, authorization }) => {
   const [check, setCheck] = useState(false);
 
   const emailRef = useRef();
@@ -12,13 +12,13 @@ const Entrance = ({ setActive, authorization }) => {
 
   useEffect(() => {
     document.addEventListener('click', (e) => {
-      if (e.target.className === 'entrance') {
+      if (e.target.className === 'logIn') {
         setActive(false);
       }
     });
     return () => {
       document.addEventListener('click', (e) => {
-        if (e.target.className === 'entrance') {
+        if (e.target.className === 'logIn') {
           setActive(false);
         }
       });
@@ -26,8 +26,8 @@ const Entrance = ({ setActive, authorization }) => {
   });
 
   return (
-    <div className="entrance" style={{ top: `${document.documentElement.scrollTop}px` }}>
-      <div className="logIn">
+    <div className="logIn" style={{ top: `${document.documentElement.scrollTop}px` }}>
+      <div className="logInContent">
         <div className="logIn_name">{check ? <h1>Регистрация</h1> : <h1>Авторизация</h1>}</div>
         {check ? <input ref={emailRef} type="email" placeholder="электронная почта" /> : null}
         <input ref={usernameRef} type="text" placeholder="логин" />
@@ -72,4 +72,4 @@ const Entrance = ({ setActive, authorization }) => {
   );
 };
 
-export default Entrance;
+export default LogIn;

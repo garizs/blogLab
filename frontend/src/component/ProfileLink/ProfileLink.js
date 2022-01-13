@@ -1,12 +1,10 @@
-import Logo from '../../common/img/signIn.svg';
+import signIn from '../../common/img/signIn.svg';
 import './ProfileLink.scss';
 
-const ProfileLink = () => {
-  return (
-    <a className="profileLink" href="/profile">
-      <img alt="signIn" src={Logo} />
-    </a>
-  );
-};
+const ProfileLink = () => (
+  <a className="profLink" href="/profile">
+    <img alt="signIn" src={signIn} />
+  </a>
+);
 
 export default ProfileLink;

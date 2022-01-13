@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import { BrowserRouter as Router } from 'react-router-dom';
 import Header from '../Header/Header';
 import Main from '../Main/Main';
-import Entrance from '../Entrance/Entrance';
+import LogIn from '../LogIn/LogIn';
 import { authorization, logOut, logIn } from '../../Store/reducers/reducerAuthorization';
 
 // eslint-disable-next-line no-shadow
@@ -28,8 +28,8 @@ const App = ({ statusAuthorization, logOut, logIn, authorization }) => {
     <div className="app">
       <Router>
         <Header statusAuthorization={statusAuthorization} setActive={setActive} logOut={logOut} />
-        <Main />
-        {active ? <Entrance setActive={setActive} authorization={authorization} /> : null}
+        <Main statusAuthorization={statusAuthorization} />
+        {active ? <LogIn setActive={setActive} authorization={authorization} /> : null}
       </Router>
     </div>
   );

@@ -1,5 +1,5 @@
 import './SignIn.scss';
-import Logo from '../../common/img/signIn.svg';
+import signIn from '../../common/img/signIn.svg';
 
 const SignIn = ({ setActive }) => (
   <div className="signIn">
@@ -9,7 +9,7 @@ const SignIn = ({ setActive }) => (
         setActive(true);
       }}
     >
-      <img alt="signIn" src={Logo} />
+      <img alt="signIn" src={signIn} />
     </button>
   </div>
 );
