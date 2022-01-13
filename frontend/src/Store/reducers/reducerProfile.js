@@ -3,7 +3,7 @@ import axios from 'axios';
 const GET_PROFILE = 'GET_PROFILE';
 
 const defaultState = {
-  profile: [],
+  profile: '',
 };
 
 // eslint-disable-next-line default-param-last
@@ -12,7 +12,8 @@ export default (state = defaultState, { type, payload }) => {
     case GET_PROFILE:
       return {
         ...state,
-        profile: { ...payload },
+        profile: { ...payload.profile },
+        data: { ...payload },
       };
     default:
       return { ...state };
@@ -28,7 +29,7 @@ export const getProfile = () => (dispatch) => {
     .then((profile) =>
       dispatch({
         type: GET_PROFILE,
-        payload: profile,
+        payload: { profile: profile.data, data: profile },
       })
     );
 };

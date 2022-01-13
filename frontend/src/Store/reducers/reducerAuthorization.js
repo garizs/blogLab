@@ -5,9 +5,12 @@ export const LOG_OUT = 'LOG_OUT';
 export const LOG_IN = 'LOG_IN';
 export const LOG_IN_ACCESS = 'LOG_IN_ACCESS';
 export const LOG_IN_REFRESH = 'LOG_IN_REFRESH';
+const GET_PROFILE = 'GET_PROFILE';
 
 const defaultState = {
   status: [],
+  profile: '',
+  data: '',
 };
 
 // eslint-disable-next-line default-param-last
@@ -38,6 +41,12 @@ export default (state = defaultState, { type, payload }) => {
         ...state,
         status: [],
       };
+    case GET_PROFILE:
+      return {
+        ...state,
+        profile: { ...payload.profile },
+        data: { ...payload },
+      };
     default:
       return { ...state };
   }
@@ -59,11 +68,29 @@ export const authorization = (username, password) => (dispatch) => {
         payload: error.response.status,
       })
     );
+
+  const token = JSON.parse(localStorage.getItem('token'));
+
+  axios
+    .get(`https://bloglab-backend.herokuapp.com/api/users/current_user/`, {
+      headers: { Authorization: `Bearer ${token.access}` },
+    })
+    .then((profile) =>
+      dispatch({
+        type: GET_PROFILE,
+        payload: { profile: profile.data, data: profile },
+      })
+    );
 };
 
 export const logOut = () => (dispatch) => {
   localStorage.token = JSON.stringify({ token: null });
+
   dispatch({ type: LOG_OUT });
+
+  window.location.reload();
+
+  document.location.href = document.location.host;
 };
 
 export const logIn = () => (dispatch) => {
@@ -127,7 +154,18 @@ export const logIn = () => (dispatch) => {
       funRefresh(token);
     } else {
       funlogOut();
+      return;
     }
+    axios
+      .get(`https://bloglab-backend.herokuapp.com/api/users/current_user/`, {
+        headers: { Authorization: `Bearer ${token.access}` },
+      })
+      .then((profile) =>
+        dispatch({
+          type: GET_PROFILE,
+          payload: { profile: profile.data, data: profile },
+        })
+      );
   } catch {
     funlogOut();
   }

@@ -10,7 +10,9 @@ import { authorization, logOut, logIn } from '../../Store/reducers/reducerAuthor
 const App = ({ statusAuthorization, logOut, logIn, authorization }) => {
   const [active, setActive] = useState(false);
 
-  useEffect(() => logIn(), []);
+  useEffect(() => {
+    logIn();
+  }, []);
 
   useEffect(() => {
     if (statusAuthorization === 200) {
