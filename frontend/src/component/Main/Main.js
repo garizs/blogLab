@@ -5,27 +5,11 @@ import Profile from '../Profile/Profile';
 import Bookmark from '../Bookmark/Bookmark';
 import './Main.scss';
 
-const Ttt = () => (
-  <h1>
-    <h1>ЗБС</h1>
-    <h1>ЗБС</h1>
-    <h1>ЗБС</h1>
-    <h1>ЗБС</h1>
-    <h1>ЗБС</h1>
-    <h1>ЗБС</h1>
-    <h1>ЗБС</h1>
-    <h1>ЗБС</h1>
-    <h1>ЗБС</h1>
-    <h1>ЗБС</h1>
-    <h1>ЗБС</h1>
-  </h1>
-);
-
 const Main = ({ statusAuthorization }) => (
   <div className="main">
     <Routes>
       <Route exact path={'/'} element={<PrimaryMain />} />
-      <Route path={'/cooking'} element={<Ttt></Ttt>} />
+      <Route path={'/cooking'} element={null} />
       <Route path={'/news/id=:id'} element={<News />} />
       {statusAuthorization === 200 ? <Route path={'/bookmark'} element={<Bookmark />} /> : null}
       {statusAuthorization === 200 ? <Route path={'/profile'} element={<Profile />} /> : null}

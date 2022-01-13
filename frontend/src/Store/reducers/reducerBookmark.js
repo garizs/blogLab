@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const GET_BOOKMARK = 'GET_BOOKMARK';
-const ADD_BOOKMARK = 'GET_BOOKMARK';
+const ADD_BOOKMARK = 'ADD_BOOKMARK';
 
 const defaultState = {
   bookmark: [],
@@ -43,7 +43,7 @@ export const addBookmark = (id) => (dispatch) => {
   const token = JSON.parse(localStorage.getItem('token'));
 
   axios
-    .get(
+    .post(
       `https://bloglab-backend.herokuapp.com/api/posts/add_remove_to_favourite/`,
       { id, action_code: 'add' },
       {

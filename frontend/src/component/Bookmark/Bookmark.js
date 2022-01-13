@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import { useEffect } from 'react';
 import { connect } from 'react-redux';
 import { getBookmark, addBookmark } from '../../Store/reducers/reducerBookmark';
